@@ -1,0 +1,290 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1450px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-weight: 300;
+  font-size: 14px;
+  color: #777777;
+  min-height: 100vh;
+}
+.dark {
+    color: #777777;
+  background-color: #1d1d1d;
+  .header {
+      background-color: #1d1d1d;
+
+  }
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+section {
+  padding: 100px 0;
+}
+
+header {
+  box-shadow: 1px 2px 5px 1px rgba(97, 71, 71, 0.15);
+  position: relative;
+  z-index: 100;
+  .header__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+
+    // z-index: 1;
+    // position: relative;
+    @media screen and (max-width: 1102px) {
+      justify-content: space-between;
+      width: 100%;
+    }
+    .header__logo {
+      width: 131px;
+      height: 35px;
+      margin-right: 426px;
+      @media screen and (max-width: 992px) {
+        margin-right: 200px;
+      }
+      @media screen and (max-width: 480px) {
+        margin-right: 70px;
+      }
+    }
+    .header__nav__list {
+      margin-right: 45px;
+      @media screen and (max-width: 1102px) {
+        display: none;
+      }
+      &.active {
+        display: flex;
+        position: fixed;
+        z-index: 1000;
+        position: absolute;
+        padding-top: 40px;
+        top: 0;
+        right: 54px;
+        width: 150px;
+        height: 200px;
+        border-radius: 20px;
+        transition: 1s;
+        transform: translateX(0);
+        background: #413f3f94;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 1102px) {
+          flex-direction: column;
+          line-height: 1.5em;
+          margin-left: 30px;
+        }
+        li {
+          &:not(:last-child) {
+            margin-right: 45px;
+          }
+          @media screen and (max-width: 1102px) {
+            &:not(:last-child) {
+              margin-right: 0px;
+            }
+          }
+          a {
+            color: #777777;
+            font-family: "Roboto";
+            font-style: bold;
+            font-weight: 700;
+            letter-spacing: 1.05px;
+            text-transform: uppercase;
+            position: relative;
+            transition: 1s;
+            &:hover {
+              &::after {
+                content: "";
+                position: absolute;
+                top: 8px;
+                left: -36px;
+                width: 20px;
+                height: 1px;
+                background-color: #06060a;
+              }
+              color: #444444;
+            }
+            @media screen and (max-width: 1102px) {
+              color: #ffffff;
+              line-height: 2;
+            }
+          }
+        }
+      }
+    }
+    .header__search {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        i {
+          color: #444444;
+          font-weight: 700;
+        }
+      }
+    }
+    .header__burger {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border: 2px solid #6d6e71;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      z-index: 1100;
+      cursor: pointer;
+      .header__line {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #6d6e71;
+      }
+      .header__line_middle {
+        margin: 5px 0;
+      }
+      @media screen and (max-width: 1102px) {
+        margin-left: 100px;
+        display: flex;
+        z-index: 1000;
+        margin-right: 50px;
+      }
+      @media screen and (max-width: 568px) {
+        margin-left: 40px;
+      }
+    }
+  }
+
+
+  //стили для радио кнопки через инпут
+
+  // .theme__change {
+  //   width: 60px;
+  //   margin-left: auto;
+  //   padding-bottom: 20px;
+  //   .ios-toggle,
+  //   .ios-toggle:active {
+  //     position: absolute;
+  //     top: -5000px;
+  //     height: 0;
+  //     width: 0;
+  //     opacity: 0;
+  //     border: none;
+  //     outline: none;
+  //   }
+
+  //   .checkbox-label {
+  //     display: block;
+  //     position: relative;
+  //     padding: 10px;
+  //     // margin-bottom: 20px;
+  //     font-size: 12px;
+  //     line-height: 16px;
+  //     width: 100%;
+  //     height: 25px;
+  //     border-radius: 18px;
+  //     background: #f8f8f8;
+  //     cursor: pointer;
+  //   }
+
+    
+
+  //   .checkbox-label:before {
+  //     content: "";
+  //     display: block;
+  //     position: absolute;
+  //     z-index: 1;
+  //     line-height: 34px;
+  //     text-indent: 40px;
+  //     height: 25px;
+  //     width: 25px;
+  //     border-radius: 100%;
+  //     top: 0px;
+  //     left: 0px;
+  //     right: auto;
+  //     background: white;
+  //     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), 0 0 0 2px #dddddd;
+  //   }
+
+  //   .checkbox-label:after {
+  //     content: attr(data-off);
+  //     display: block;
+  //     position: absolute;
+  //     z-index: 0;
+  //     top: -8px;
+  //     left: -300px;
+  //     padding: 10px;
+  //     height: 100%;
+  //     width: 300px;
+  //     text-align: right;
+  //     color: #bfbfbf;
+  //     white-space: nowrap;
+  //   }
+
+  //   .ios-toggle:checked + .checkbox-label {
+  //     box-shadow: inset 0 0 0 20px rgb(154, 155, 154),
+  //       0 0 0 2px rgb(139, 139, 139);
+  //   }
+
+  //   .ios-toggle:checked + .checkbox-label:before {
+  //     left: calc(100% - 25px);
+  //     box-shadow: 0 0 0 2px transparent, 0 3px 3px rgba(0, 0, 0, 0.3);
+  //   }
+  // }
+  .switch-btn {
+    display: inline-block;
+    margin-left: auto;
+    width: 62px; /* ширина переключателя */
+    height: 24px; /* высота переключателя */
+    border-radius: 12px; /* радиус скругления */
+    background: #bfbfbf; /* цвет фона */
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 300ms; /* анимация */
+}
+.switch-btn::after {
+    content: "";
+    height: 36px; /* высота кнопки */
+    width: 36px; /* ширина кнопки */
+    border-radius: 18px; /* радиус кнопки */
+    background: #fff; /* цвет кнопки */
+    top: -6px; /* положение кнопки по вертикали относительно основы */
+    left: -6px; /* положение кнопки по горизонтали относительно основы */
+    transition-duration: 300ms; /* анимация */
+    box-shadow: 0 0 10px 0 #999999; /* тень */
+    position: absolute;
+    z-index: 1;
+}
+.switch-on {
+    background: #fff;
+    box-shadow: inset 0 0 10px 0 #999999; /* тень */
+}
+.switch-on::after {
+    left: 30px;
+    background: #505050;
+}
+}

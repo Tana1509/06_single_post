@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__nav">
+          <div class="header__logo">
+            <img src="../img/logo.png" alt="logo" />
+          </div>
+          <div class="header__nav__list">
+            <nav>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__search">
+            <a href=""><i class="fa fa-search"></i></a>
+          </div>
+          <div class="header__burger">
+            <span class="header__line header__line_top"></span>
+            <span class="header__line header__line_middle"></span>
+            <span class="header__line header__line_bottom"></span>
+          </div>
+
+        </div>
+                  <div class="theme__change">
+                    <input type="checkbox" name="checkbox1" id="dark theme" class="ios-toggle" checked />
+                    <label for="dark theme" class="checkbox-label" data-off="Dark theme" data-on="Light theme
+                            "></label>
+                  </div>
+      </div>
+    </header>
+
+        <section class="heading">
+          <div class="header__content slider">
+            <div class="slider__img">
+              <img src="../img/slider_01.png" alt="slider_01">
+            </div>
+            <div class="header__text">
+              <h1>News About Lian</h1>
+              <p>Latest News & Insights</p>
+            </div>
+          </div>
+        </section>
+    <section class="blog__post">
+      <div class="container">
+        <h2>I am a Blog Post with an Awesome Image</h2>
+        <div class="subtitle">
+          <p class="subtitle__text">by Jenn Pereira</p>
+          <p class="subtitle__text">February 28, 2015</p>
+          <p class="subtitle__text"><i class="fa fa-heart"></i>324 likes</p>
+        </div>
+        <div class="blog__post__img">
+          <img src="../img/blog.png" alt="blog" />
+        </div>
+
+        <p class="blog__post__text">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+          ullamcorper suscipit. Ut wisi enim ad minim veniam, quis nostrud
+          exerci tation ullamcorper suscipit.
+        </p>
+
+        <p class="blog__post__text">
+          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+          molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+          vero eros et accumsan et iusto odio dignissim qui blandit praesent
+          luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+          Nam liber tempor cum soluta nobis eleifend option congue nihil
+          imperdiet doming id quod mazim placerat facer possim assum.
+        </p>
+        <div class="blog__post__quote">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+          diam nonummy.
+        </div>
+        <h3>This is a Heading</h3>
+        <p class="blog__post__text">
+          Typi non habent claritatem insitam; est usus legentis in iis qui facit
+          eorum claritatem. Investigationes demonstraverunt lectores legere me
+          lius quod ii legunt saepius. Claritas est etiam processus dynamicus,
+          qui sequitur mutationem consuetudium lectorum. Mirum est notare quam
+          littera gothica, quam nunc putamus parum claram, anteposuerit
+          litterarum formas humanitatis per seacula quarta decima et quinta
+          decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant
+          sollemnes in futurum.
+        </p>
+        <p class="blog__post__text">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+          molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+          vero eros et accumsan et iusto odio dignissim qui blandit praesent
+          luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+          Nam liber tempor cum soluta nobis eleifend option congue.
+        </p>
+      </div>
+    </section>
+    <section class="blog__post__form">
+      <div class="container">
+        <h4>Leave a Comment</h4>
+        <div class="form">
+          <form class="blog__post__form" action="#">
+            <div class="form__data">
+              <input class="blog__post__form__input blog__post__form_name" type="text" placeholder="Name" />
+              <input class="blog__post__form__input blog__post__form_email" type="email" placeholder="Email" />
+              <input class="blog__post__form__input blog__post__form_website" type="text" name="website" placeholder="Website" />
+            </div>
+            <textarea class="blog__post__form_message"
+              name="message"
+              
+              placeholder="Message"
+            ></textarea>
+            <div class="form__btn"> 
+              <!-- <input type="submit" class="form__btn" value="Send Message"> -->
+              <button >Send Message</button>
+              </div> 
+          </form>
+          <div class="message__modal">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="footer__logo">
+          <img src="../img/logo.png" alt="logo" />
+        </div>
+        <div class="footer__socials">
+          <a href="#"><i class="fa fa-facebook-f"></i> </a>
+          <a href="#"><i class="fa fa-google" aria-hidden="true"></i> </a>
+          <a href="#"><i class="fa fa-twitter"></i> </a>
+          <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> </a>
+          <a href="#"><i class="fa fa-dribbble"></i> </a>
+          <a href="#"><i class="fa fa-pinterest-p"></i> </a>
+          <a href="#"><i class="fa fa-instagram"></i> </a>
+        </div>
+        <div class="footer__text">
+          <p>
+            © 2016 <span>Mulitix Theme</span> by ThemeForces. All Rights
+            Reserved
+          </p>
+        </div>
+      </div>
+      <div class="to_top">
+        <p>&#9650;</p>
+      </div>
+    </footer>
+    <script src="../jquery-3.5.0.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
