@@ -19,14 +19,6 @@ body {
   color: #777777;
   min-height: 100vh;
 }
-.dark {
-    color: #777777;
-  background-color: #1d1d1d;
-  .header {
-      background-color: #1d1d1d;
-
-  }
-}
 ul {
   list-style: none;
 }
@@ -43,13 +35,10 @@ header {
   z-index: 100;
   .header__nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding-top: 40px;
     padding-bottom: 10px;
-
-    // z-index: 1;
-    // position: relative;
     @media screen and (max-width: 1102px) {
       justify-content: space-between;
       width: 100%;
@@ -57,16 +46,9 @@ header {
     .header__logo {
       width: 131px;
       height: 35px;
-      margin-right: 426px;
-      @media screen and (max-width: 992px) {
-        margin-right: 200px;
-      }
-      @media screen and (max-width: 480px) {
-        margin-right: 70px;
-      }
     }
     .header__nav__list {
-      margin-right: 45px;
+      margin-left: 60px;
       @media screen and (max-width: 1102px) {
         display: none;
       }
@@ -111,18 +93,23 @@ header {
             letter-spacing: 1.05px;
             text-transform: uppercase;
             position: relative;
-            transition: 1s;
+            transition: 0.5s;
+            &::after {
+              content: "";
+              position: absolute;
+              left: -30px;
+              bottom: 50%;
+              width: 20px;
+              height: 2px;
+              background-color: #06060a;
+              opacity: 0;
+              transition: 0.5s;
+            }
             &:hover {
+              color: #000;
               &::after {
-                content: "";
-                position: absolute;
-                top: 8px;
-                left: -36px;
-                width: 20px;
-                height: 1px;
-                background-color: #06060a;
+                opacity: 1;
               }
-              color: #444444;
             }
             @media screen and (max-width: 1102px) {
               color: #ffffff;
@@ -132,159 +119,174 @@ header {
         }
       }
     }
-    .header__search {
+    .header__mini__nav {
+      margin-left: 30px;
+      // margin-right: auto;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      a {
-        i {
-          color: #444444;
-          font-weight: 700;
+      .header__search {
+        a {
+          i {
+            color: #444444;
+            font-weight: 700;
+          }
+        }
+      }
+      .header__burger {
+        margin-left: 20px;
+        display: none;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #6d6e71;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        z-index: 1100;
+        cursor: pointer;
+        .header__line {
+          display: block;
+          width: 20px;
+          height: 2px;
+          background: #6d6e71;
+        }
+        .header__line_middle {
+          margin: 5px 0;
+        }
+        @media screen and (max-width: 1102px) {
+          display: flex;
+          z-index: 1000;
+          // margin-right: 50px;
+        }
+        // @media screen and (max-width: 568px) {
+        //   margin-left: 40px;
+        // }
+      }
+
+      //стили для радио кнопки через инпут
+
+      // .theme__change {
+      //   width: 60px;
+      //   margin-left: auto;
+      //   padding-bottom: 20px;
+      //   .ios-toggle,
+      //   .ios-toggle:active {
+      //     position: absolute;
+      //     top: -5000px;
+      //     height: 0;
+      //     width: 0;
+      //     opacity: 0;
+      //     border: none;
+      //     outline: none;
+      //   }
+
+      //   .checkbox-label {
+      //     display: block;
+      //     position: relative;
+      //     padding: 10px;
+      //     // margin-bottom: 20px;
+      //     font-size: 12px;
+      //     line-height: 16px;
+      //     width: 100%;
+      //     height: 25px;
+      //     border-radius: 18px;
+      //     background: #f8f8f8;
+      //     cursor: pointer;
+      //   }
+
+      //   .checkbox-label:before {
+      //     content: "";
+      //     display: block;
+      //     position: absolute;
+      //     z-index: 1;
+      //     line-height: 34px;
+      //     text-indent: 40px;
+      //     height: 25px;
+      //     width: 25px;
+      //     border-radius: 100%;
+      //     top: 0px;
+      //     left: 0px;
+      //     right: auto;
+      //     background: white;
+      //     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), 0 0 0 2px #dddddd;
+      //   }
+
+      //   .checkbox-label:after {
+      //     content: attr(data-off);
+      //     display: block;
+      //     position: absolute;
+      //     z-index: 0;
+      //     top: -8px;
+      //     left: -300px;
+      //     padding: 10px;
+      //     height: 100%;
+      //     width: 300px;
+      //     text-align: right;
+      //     color: #bfbfbf;
+      //     white-space: nowrap;
+      //   }
+
+      //   .ios-toggle:checked + .checkbox-label {
+      //     box-shadow: inset 0 0 0 20px rgb(154, 155, 154),
+      //       0 0 0 2px rgb(139, 139, 139);
+      //   }
+
+      //   .ios-toggle:checked + .checkbox-label:before {
+      //     left: calc(100% - 25px);
+      //     box-shadow: 0 0 0 2px transparent, 0 3px 3px rgba(0, 0, 0, 0.3);
+      //   }
+      // }
+      .theme__btn {
+        margin-left: 30px;
+        @media screen and (max-width: 560px) {
+          margin-left: 20px;
+        }
+        .switch-btn {
+          display: inline-block;
+          width: 62px; /* ширина переключателя */
+          height: 24px; /* высота переключателя */
+          border-radius: 12px; /* радиус скругления */
+          background: #bfbfbf; /* цвет фона */
+          z-index: 0;
+          margin: 0;
+          padding: 0;
+          border: none;
+          cursor: pointer;
+          position: relative;
+          transition-duration: 300ms; /* анимация */
+          @media screen and (max-width: 560px) {
+            width: 42px; /* ширина переключателя */
+            height: 14px; /* высота переключателя */
+          }
+        }
+        .switch-btn::after {
+          content: "";
+          height: 36px; /* высота кнопки */
+          width: 36px; /* ширина кнопки */
+          border-radius: 18px; /* радиус кнопки */
+          background: #fff; /* цвет кнопки */
+          top: -6px; /* положение кнопки по вертикали относительно основы */
+          left: -6px; /* положение кнопки по горизонтали относительно основы */
+          transition-duration: 300ms; /* анимация */
+          box-shadow: 0 0 10px 0 #999999; /* тень */
+          position: absolute;
+          z-index: 1;
+          @media screen and (max-width: 560px) {
+            height: 20px; /* высота кнопки */
+            width: 20px; /* ширина кнопки */
+            top: -4px;
+          }
+        }
+        .switch-on {
+          background: #fff;
+          box-shadow: inset 0 0 10px 0 #999999; /* тень */
+        }
+        .switch-on::after {
+          left: 30px;
+          background: #505050;
         }
       }
     }
-    .header__burger {
-      display: none;
-      width: 40px;
-      height: 40px;
-      border: 2px solid #6d6e71;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-      z-index: 1100;
-      cursor: pointer;
-      .header__line {
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: #6d6e71;
-      }
-      .header__line_middle {
-        margin: 5px 0;
-      }
-      @media screen and (max-width: 1102px) {
-        margin-left: 100px;
-        display: flex;
-        z-index: 1000;
-        margin-right: 50px;
-      }
-      @media screen and (max-width: 568px) {
-        margin-left: 40px;
-      }
-    }
   }
-
-
-  //стили для радио кнопки через инпут
-
-  // .theme__change {
-  //   width: 60px;
-  //   margin-left: auto;
-  //   padding-bottom: 20px;
-  //   .ios-toggle,
-  //   .ios-toggle:active {
-  //     position: absolute;
-  //     top: -5000px;
-  //     height: 0;
-  //     width: 0;
-  //     opacity: 0;
-  //     border: none;
-  //     outline: none;
-  //   }
-
-  //   .checkbox-label {
-  //     display: block;
-  //     position: relative;
-  //     padding: 10px;
-  //     // margin-bottom: 20px;
-  //     font-size: 12px;
-  //     line-height: 16px;
-  //     width: 100%;
-  //     height: 25px;
-  //     border-radius: 18px;
-  //     background: #f8f8f8;
-  //     cursor: pointer;
-  //   }
-
-    
-
-  //   .checkbox-label:before {
-  //     content: "";
-  //     display: block;
-  //     position: absolute;
-  //     z-index: 1;
-  //     line-height: 34px;
-  //     text-indent: 40px;
-  //     height: 25px;
-  //     width: 25px;
-  //     border-radius: 100%;
-  //     top: 0px;
-  //     left: 0px;
-  //     right: auto;
-  //     background: white;
-  //     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), 0 0 0 2px #dddddd;
-  //   }
-
-  //   .checkbox-label:after {
-  //     content: attr(data-off);
-  //     display: block;
-  //     position: absolute;
-  //     z-index: 0;
-  //     top: -8px;
-  //     left: -300px;
-  //     padding: 10px;
-  //     height: 100%;
-  //     width: 300px;
-  //     text-align: right;
-  //     color: #bfbfbf;
-  //     white-space: nowrap;
-  //   }
-
-  //   .ios-toggle:checked + .checkbox-label {
-  //     box-shadow: inset 0 0 0 20px rgb(154, 155, 154),
-  //       0 0 0 2px rgb(139, 139, 139);
-  //   }
-
-  //   .ios-toggle:checked + .checkbox-label:before {
-  //     left: calc(100% - 25px);
-  //     box-shadow: 0 0 0 2px transparent, 0 3px 3px rgba(0, 0, 0, 0.3);
-  //   }
-  // }
-  .switch-btn {
-    display: inline-block;
-    margin-left: auto;
-    width: 62px; /* ширина переключателя */
-    height: 24px; /* высота переключателя */
-    border-radius: 12px; /* радиус скругления */
-    background: #bfbfbf; /* цвет фона */
-    z-index: 0;
-    margin: 0;
-    padding: 0;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    transition-duration: 300ms; /* анимация */
-}
-.switch-btn::after {
-    content: "";
-    height: 36px; /* высота кнопки */
-    width: 36px; /* ширина кнопки */
-    border-radius: 18px; /* радиус кнопки */
-    background: #fff; /* цвет кнопки */
-    top: -6px; /* положение кнопки по вертикали относительно основы */
-    left: -6px; /* положение кнопки по горизонтали относительно основы */
-    transition-duration: 300ms; /* анимация */
-    box-shadow: 0 0 10px 0 #999999; /* тень */
-    position: absolute;
-    z-index: 1;
-}
-.switch-on {
-    background: #fff;
-    box-shadow: inset 0 0 10px 0 #999999; /* тень */
-}
-.switch-on::after {
-    left: 30px;
-    background: #505050;
-}
 }

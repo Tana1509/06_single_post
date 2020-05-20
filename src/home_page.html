@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
 
-  <body data-theme="dark">
+  <body>
     <header class="header">
       <div class="container">
         <div class="header__nav">
@@ -28,44 +28,51 @@
           <div class="header__nav__list">
             <nav>
               <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="../src/home_page.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">BLOG</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="../src/contact.html">Contact</a></li>
               </ul>
             </nav>
           </div>
-          <div class="header__search">
-            <a href=""><i class="fa fa-search"></i></a>
-          </div>
-          <div class="header__burger">
-            <span class="header__line header__line_top"></span>
-            <span class="header__line header__line_middle"></span>
-            <span class="header__line header__line_bottom"></span>
+
+          <div class="header__mini__nav">
+            <div class="header__search">
+              <a href=""><i class="fa fa-search"></i></a>
+            </div>
+            <div class="header__burger">
+              <span class="header__line header__line_top"></span>
+              <span class="header__line header__line_middle"></span>
+              <span class="header__line header__line_bottom"></span>
+            </div>
+
+            <!-- кнопка как в айфоне через инпут -->
+            <!-- <div class="theme__change">
+            <input
+              type="checkbox"
+              name="checkbox1"
+              id="dark_theme"
+              class="ios-toggle"
+              checked
+            />
+            <label
+              for="dark_theme"
+              class="checkbox-label"
+              data-off="Dark theme"
+              data-on="Light theme
+              "
+            ></label>
+          </div> -->
+            <div class="theme__btn">
+              <div class="switch-btn"></div>
+            </div>
           </div>
         </div>
-        <link rel="stylesheet" href="../scss/dark_theme.scss">
-<!-- кнопка как в айфоне через инпут -->
-        <!-- <div class="theme__change">
-          <input
-            type="checkbox"
-            name="checkbox1"
-            id="dark_theme"
-            class="ios-toggle"
-            checked
-          />
-          <label
-            for="dark_theme"
-            class="checkbox-label"
-            data-off="Dark theme"
-            data-on="Light theme
-            "
-          ></label>
-        </div> -->
-        <div class="switch-btn"></div>
       </div>
     </header>
+
+    <!-- // heading -->
 
     <section class="heading">
       <div class="heading__slaider owl-carousel">
@@ -88,10 +95,10 @@
             <p>We Deliver Quality Results</p>
           </div>
         </div>
-       
+
         <div class="heading__slaide">
           <div class="slider__img">
-            <img src="../img/slider_01.png" alt="slider_01">
+            <img src="../img/slider_01.png" alt="slider_01" />
           </div>
           <div class="header__text">
             <h1>News About Lian</h1>
@@ -100,73 +107,113 @@
         </div>
       </div>
       <div class="owl-nav_arrows">
-        <div class="owl-nav_arrow owl-nav_arrow_prev"><img src="../img/heading_arr_prev.png" alt=""></i></div>
-        <div class="owl-nav_arrow owl-nav_arrow_next"><img src="../img/heading_arr_next.png" alt=""></div>
+        <div class="owl-nav_arrow owl-nav_arrow_prev">
+          <img src="../img/heading_arr_prev.png" alt="" />
+        </div>
+        <div class="owl-nav_arrow owl-nav_arrow_next">
+          <img src="../img/heading_arr_next.png" alt="" />
+        </div>
       </div>
     </section>
 
     <section class="home__page__filter">
       <div class="container">
         <div class="home__page__filter__nav">
-          <a href="#">All</a>
+          <div class="filter__nav active">All</div>
           <span class="diagonal-line">/</span>
-          <a href="#">Logo</a>
+          <div class="filter__nav">Logo</div>
           <span class="diagonal-line">/</span>
-          <a href="#">Mobile App</a>
+          <div class="filter__nav">Mobile App</div>
           <span class="diagonal-line">/</span>
-          <a href="#">WordPress</a>
+          <div class="filter__nav">WordPress</div>
           <span class="diagonal-line">/</span>
-          <a href="#">Web Design</a>
+          <div class="filter__nav">Web Design</div>
           <span class="diagonal-line">/</span>
-          <a href="#">UI/IX</a>
+          <div class="filter__nav">UI/IX</div>
           <span class="diagonal-line">/</span>
-          <a href="#">Branding </a>
+          <div class="filter__nav">Branding</div>
         </div>
-<div class="home__page__filter__works">
-  <div class="home__page__filter__work">
-    <img src="../img/home__page__filter__wor1.png" alt="">
-    <p>+</p>
-  </div>
-  <div class="home__page__filter__work">
-    <img src="../img/home__page__filter__work2.png" alt="">
-    <p>+</p>
-  </div>
-  <div class="home__page__filter__work">
-    <img src="../img/home__page__filter__work3.png" alt="">
-    <p>+</p>
-  </div>
-  <div class="home__page__filter__work">
-    <img src="../img/home__page__filter__work4.png" alt="">
-    <p>+</p>
-  </div>
-  <div class="home__page__filter__work">
-    <img src="../img/home__page__filter__work5.png" alt="">
-    <p>+</p>
-  </div>
-  <div class="home__page__filter__work">
-    <img src="../img/home__page__filter__work6.png" alt="">
-    <p>+</p>
-  </div>
-  <div class="home__page__filter__work">
-    <img src="../img/home__page__filter__work7.png" alt="">
-    <p>+</p>
-  </div>
-  <div class="home__page__filter__work">
-    <img src="../img/home__page__filter__work8.png" alt="">
-    <p>+</p>
-  </div>
-  <div class="home__page__filter__work">
-    <img src="../img/home__page__filter__work9.png" alt="">
-    <p>+</p>
-  </div>
-  <div class="home__page__filter__work">
-    <img src="../img/home__page__filter__work10.png" alt="">
-    <p>+</p>
-  </div>
-</div>
-<div class="home__page__filter__btn">
-  <a href="#">Load More</a>
-</div>
+        <div class="home__page__filter__works">
+          <div class="home__page__filter__work active" data-category="logo">
+            <div class="work__img">
+              <img src="../img/home__page__filter__wor1.png" alt="work1" />
+            </div>
+            <div class="overlay"><p>+</p></div>
+          </div>
+          <div class="home__page__filter__work active" data-category="mobile app">
+            <div class="work__img">
+              <img src="../img/home__page__filter__work2.png" alt="work2" />
+            </div>
+
+            <div class="overlay"><p>+</p></div>
+          </div>
+          <div class="home__page__filter__work active" data-category="mobile app">
+            <div class="work__img">
+              <img src="../img/home__page__filter__work3.png" alt="work3" />
+            </div>
+            <div class="overlay"><p>+</p></div>
+          </div>
+          <div class="home__page__filter__work active" data-category="web design">
+            <div class="work__img">
+              <img src="../img/home__page__filter__work4.png" alt="work4" />
+            </div>
+            <div class="overlay">
+              <p>+</p>
+            </div>
+          </div>
+          <div class="home__page__filter__work active" data-category="web design">
+            <div class="work__img">
+              <img src="../img/home__page__filter__work5.png" alt="work5" />
+            </div>
+            <div class="overlay">
+              <p>+</p>
+            </div>
+          </div>
+          <div class="home__page__filter__work active" data-category="ui/ix">
+            <div class="work__img">
+              <img src="../img/home__page__filter__work6.png" alt="work6" />
+            </div>
+            <div class="overlay">
+              <p>+</p>
+            </div>
+          </div>
+          <div class="home__page__filter__work active" data-category="ui/ix">
+            <div class="work__img">
+              <img src="../img/home__page__filter__work7.png" alt="work7" />
+            </div>
+            <div class="overlay">
+              <p>+</p>
+            </div>
+          </div>
+          <div class="home__page__filter__work active" data-category="branding">
+            <div class="work__img">
+              <img src="../img/home__page__filter__work8.png" alt="work8" />
+            </div>
+            <div class="overlay">
+              <p>+</p>
+            </div>
+          </div>
+          <div class="home__page__filter__work active" data-category="branding">
+            <div class="work__img">
+              <img src="../img/home__page__filter__work9.png" alt="work9" />
+            </div>
+            <div class="overlay">
+              <p>+</p>
+            </div>
+          </div>
+          <div class="home__page__filter__work active" data-category="wordpress">
+            <div class="work__img">
+              <img src="../img/home__page__filter__work10.png" alt="work10" />
+            </div>
+            <div class="overlay">
+              <p>+</p>
+            </div>
+          </div>
+        </div>
+      
+      <div class="home__page__filter__btn">
+        <a href="#">Load More</a>
+      </div>
       </div>
     </section>
     <footer class="footer">
@@ -194,7 +241,7 @@
         <p>&#9650;</p>
       </div>
     </footer>
-    
+
     <script src="../jquery-3.5.0.js"></script>
     <script src="../libs/owl.carousel.min.js"></script>
     <script src="./index.js"></script>

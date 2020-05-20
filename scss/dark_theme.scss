@@ -1,9 +1,142 @@
-body [data-theme-dark] {
-  font-family: "Roboto", sans-serif;
-  line-height: 1;
-  font-weight: 300;
-  font-size: 14px;
-  color: #777777;
-  background-color: #1d1d1d;
-  min-height: 100vh;
+body {
+  &.dark {
+    color: #777777;
+    background-color: #2e2b2b;
+    header {
+      box-shadow: 1px 2px 5px 1px rgba(238, 231, 231, 0.15);
+      background-color: #1d1d1d;
+      .header__nav__list {
+        background-color: #1d1d1d;
+        a {
+          color: #b6b4b4;
+
+          &:hover {
+            color: #ebe6e6;
+            &::after {
+              background-color: #f1f1f3;
+            }
+            color: #918f8f;
+          }
+        }
+      }
+      .header__search {
+        a {
+          i {
+            color: #b6b4b4;
+          }
+        }
+      }
+      .header__burger {
+        border: 2px solid #b6b4b4;
+        .header__line {
+          background: #b6b4b4;
+        }
+      }
+      .theme__btn {
+        .switch-btn::after {
+          box-shadow: none;
+        }
+        .switch-on {
+          box-shadow: none;
+        }
+      }
+    }
+    .home__page__filter {
+      background: #4e4d4d;
+      .home__page__filter__nav {
+        border: 1px solid #d9d9d9;
+        a {
+          color: #929191;
+
+          &:hover {
+            color: #d9d9d9;
+          }
+        }
+        .diagonal-line {
+          color: #d9d9d9;
+        }
+      }
+      .home__page__filter__works {
+        .home__page__filter__work {
+          p {
+            color: #c9c9c9;
+          }
+        }
+      }
+    }
+    .contact__form {
+      .contact__us {
+        h2 {
+          color: #ffffff;
+        }
+        .subtitle {
+          &::after {
+            background-color: #727070;
+          }
+        }
+        p {
+          color: #727070;
+        }
+        .address {
+          margin-bottom: 35px;
+        }
+        span {
+          color: #fff;
+        }
+        a {
+          color: #727070;
+        }
+      }
+      .form {
+        .inputs {
+          input {
+            background: #777777;
+            border: none;
+            color: #ffffff;
+            &::placeholder {
+              color: #ffffff;
+            }
+          }
+        }
+        textarea {
+          background: #777777;
+          color: #ffffff;
+          &::placeholder {
+            color: #ffffff;
+          }
+        }
+        .btn button {
+          background-color: #eeecec;
+          color: #2e2d2d;
+        }
+      }
+    }
+
+    .values {
+      @include section;
+    }
+    .works__slider .main_slider {
+      @include section;
+       p {
+        color: #9c9c9c;
+      }
+    }
+    footer {
+      .footer__socials {
+        a {
+          &:hover {
+            color: #f7f3f3;
+          }
+        }
+      }
+      .footer__text {
+        p {
+          color: #9c9c9c;
+        }
+        span {
+          color: #ebe8e8;
+        }
+      }
+    }
+  }
 }
