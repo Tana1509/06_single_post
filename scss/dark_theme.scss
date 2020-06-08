@@ -115,12 +115,18 @@ body {
     .values {
       @include section;
     }
-    .works__slider .main_slider {
-      @include section;
-       p {
-        color: #9c9c9c;
+    
+      .works__slider {
+        .btn {
+        p {
+          color: #9c9c9c;
+        }
       }
-    }
+        .main_slider {
+        @include section;
+        }
+      }
+    
     footer {
       .footer__socials {
         a {

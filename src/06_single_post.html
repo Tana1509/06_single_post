@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./index.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__nav">
-          <div class="header__logo">
-            <img src="../img/logo.png" alt="logo" />
-          </div>
-          <div class="header__nav__list">
-            <nav>
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+ 
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__nav">
+        <div class="header__logo">
+          <img src="../img/logo.png" alt="logo" />
+        </div>
+        <div class="header__nav__list">
+          <nav>
+            <ul>
+              <li><a href="../src/home_page.html">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">BLOG</a></li>
+              <li><a href="../src/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header__mini__nav">
           <div class="header__search">
             <a href=""><i class="fa fa-search"></i></a>
           </div>
@@ -41,27 +42,24 @@
             <span class="header__line header__line_middle"></span>
             <span class="header__line header__line_bottom"></span>
           </div>
-
-        </div>
-                  <div class="theme__change">
-                    <input type="checkbox" name="checkbox1" id="dark theme" class="ios-toggle" checked />
-                    <label for="dark theme" class="checkbox-label" data-off="Dark theme" data-on="Light theme
-                            "></label>
-                  </div>
-      </div>
-    </header>
-
-        <section class="heading">
-          <div class="header__content slider">
-            <div class="slider__img">
-              <img src="../img/slider_01.png" alt="slider_01">
-            </div>
-            <div class="header__text">
-              <h1>News About Lian</h1>
-              <p>Latest News & Insights</p>
-            </div>
+          <div class="theme__btn">
+            <div class="switch-btn"></div>
           </div>
-        </section>
+        </div>
+      </div>
+    </div>
+  </header>
+    <section class="heading">
+      <div class="header__content slider">
+        <div class="slider__img">
+          <img src="../img/slider_01.png" alt="slider_01" />
+        </div>
+        <div class="header__text">
+          <h1>News About Lian</h1>
+          <p>Latest News & Insights</p>
+        </div>
+      </div>
+    </section>
     <section class="blog__post">
       <div class="container">
         <h2>I am a Blog Post with an Awesome Image</h2>
@@ -127,23 +125,34 @@
         <div class="form">
           <form class="blog__post__form" action="#">
             <div class="form__data">
-              <input class="blog__post__form__input blog__post__form_name" type="text" placeholder="Name" />
-              <input class="blog__post__form__input blog__post__form_email" type="email" placeholder="Email" />
-              <input class="blog__post__form__input blog__post__form_website" type="text" name="website" placeholder="Website" />
+              <input
+                class="blog__post__form__input blog__post__form_name"
+                type="text"
+                placeholder="Name"
+              />
+              <input
+                class="blog__post__form__input blog__post__form_email"
+                type="email"
+                placeholder="Email"
+              />
+              <input
+                class="blog__post__form__input blog__post__form_website"
+                type="text"
+                name="website"
+                placeholder="Website"
+              />
             </div>
-            <textarea class="blog__post__form_message"
+            <textarea
+              class="blog__post__form_message"
               name="message"
-              
               placeholder="Message"
             ></textarea>
-            <div class="form__btn"> 
+            <div class="form__btn">
               <!-- <input type="submit" class="form__btn" value="Send Message"> -->
-              <button >Send Message</button>
-              </div> 
+              <button>Send Message</button>
+            </div>
           </form>
-          <div class="message__modal">
-            
-          </div>
+          <div class="message__modal"></div>
         </div>
       </div>
     </section>

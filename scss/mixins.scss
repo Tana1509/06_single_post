@@ -1,10 +1,30 @@
-  @mixin section {
-      background: #4b4a4a;
-    h2, h3, h4, h5 {
-        color: #dad8d8;
-      }
-      p {
-        color: #a8a7a7;
-      }
-    }
-    
+@mixin section {
+  background: #4b4a4a;
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: #dad8d8;
+  }
+  p {
+    color: #a8a7a7;
+  }
+}
+@mixin h3 {
+  color: #000000;
+  font-family: "Roboto - Light";
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+}
+@mixin subtitle {
+  color: #777777;
+  font-family: "Roboto - Light";
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.07em;
+  line-height: 1.5em;
+}
