@@ -83,13 +83,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, 332px));
     gap: 30px;
-   
+
     .team__member {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-    
+
       .team__member__pic {
         display: flex;
         justify-content: center;

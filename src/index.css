@@ -384,7 +384,7 @@ header .header__nav .header__mini__nav .theme__btn .switch-on::after {
   }
 }
 
-.heading .heading__content .container h1 {
+.heading .heading__content .container .heading__text h1 {
   white-space: nowrap;
   background: #000000;
   color: #ffffff;
@@ -398,12 +398,18 @@ header .header__nav .header__mini__nav .theme__btn .switch-on::after {
 }
 
 @media screen and (max-width: 760px) {
-  .heading .heading__content .container h1 {
+  .heading .heading__content .container .heading__text h1 {
     font-size: 30px;
   }
 }
 
-.heading .heading__content .container p {
+@media screen and (max-width: 367px) {
+  .heading .heading__content .container .heading__text h1 {
+    font-size: 20px;
+  }
+}
+
+.heading .heading__content .container .heading__text p {
   color: #000000;
   font-family: "Roboto";
   margin-top: 55px;
