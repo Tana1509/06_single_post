@@ -1,9 +1,11 @@
-
 .contact__form {
   .contact__us {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
 
     @media screen and (max-width: 992px) {
       display: flex;
@@ -65,6 +67,8 @@
     }
 
     .form {
+      max-width: 740px;
+      width: 100%;
       .inputs {
         display: flex;
         justify-content: center;
@@ -183,35 +187,32 @@
     text-align: center;
   }
   p {
-    font-size: 14px;
-    line-height: 1.8em;
-    color: #777777;
-    font-weight: 400;
+    @include paragraph;
   }
-}
 
-.values__items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 350px));
-  column-gap: 35px;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  .values__item {
-    @media screen and (max-width: 1169px) {
-      margin-bottom: 30px;
-    }
-    .pic {
-      object-fit: cover;
-      overflow: hidden;
-      max-height: 245px;
-    }
-    h5 {
-      font-size: 18px;
-      letter-spacing: 0.1em;
-      color: #000000;
-      margin: 23px 0 43px 0;
-      text-transform: uppercase;
+  .values__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 350px));
+    column-gap: 35px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    .values__item {
+      @media screen and (max-width: 1169px) {
+        margin-bottom: 30px;
+      }
+      .pic {
+        object-fit: cover;
+        overflow: hidden;
+        max-height: 245px;
+      }
+      h5 {
+        font-size: 18px;
+        letter-spacing: 0.1em;
+        color: #000000;
+        margin: 23px 0 43px 0;
+        text-transform: uppercase;
+      }
     }
   }
 }

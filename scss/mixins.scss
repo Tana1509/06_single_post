@@ -28,3 +28,32 @@
   letter-spacing: 0.07em;
   line-height: 1.5em;
 }
+@mixin paragraph {
+  font-size: 14px;
+  line-height: 1.8em;
+  color: #777777;
+  font-weight: 400;
+}
+@mixin heading {
+  font-size: 18px;
+  letter-spacing: .2em;
+  color: #000000;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+@mixin loadMoreBtn {
+   margin: 0 auto;
+    padding: 10px 23px;
+    background: #959595;
+    max-width: 125px;
+    border-radius: 2px;
+    transition: .7s;
+        a {
+      font-size: 13px;
+      color: #ffffff;
+      font-weight: 700;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+}

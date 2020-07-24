@@ -6,7 +6,7 @@
   padding: 0;
 }
 .container {
-  max-width: 1450px;
+  max-width: 1150px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -55,18 +55,22 @@ header {
       }
       &.active {
         display: flex;
+        justify-content: center;
         position: fixed;
         z-index: 1000;
         position: absolute;
         padding-top: 40px;
         top: 0;
-        right: 54px;
-        width: 150px;
-        height: 200px;
-        border-radius: 20px;
+        right: 0;
+        // width: 150px;
+        // height: 200px;
+        width: 100%;
+        height: 250px;
+        border-radius: 2px;
         transition: 1s;
         transform: translateX(0);
-        background: #413f3f94;
+        background: #413f3fcb;
+        font-size: 20px;
       }
       ul {
         display: flex;
@@ -102,11 +106,17 @@ header {
               bottom: 50%;
               width: 20px;
               height: 2px;
-              background-color: #06060a;
+              background: rgb(6, 6, 10);
               opacity: 0;
-              transition: 0.5s;
+              transition: 1s;
             }
             &:hover {
+              color: #000;
+              &::after {
+                opacity: 1;
+              }
+            }
+            &.active {
               color: #000;
               &::after {
                 opacity: 1;

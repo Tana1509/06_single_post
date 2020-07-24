@@ -23,11 +23,11 @@ jQuery(document).ready(function($) {
     );
     return false;
   });
-  $(".heading__slaider").slick({
-    nextArrow: document.querySelector("#owl-nav_arrow_prev"),
-    prevArrow: document.querySelector("#owl-nav_arrow_next"),
-  dots: true
-  });
+  // $(".heading__slaider").slick({
+  //   // nextArrow: document.querySelector("#owl-nav_arrow_prev"),
+  //   // prevArrow: document.querySelector("#owl-nav_arrow_next"),
+  // dots: true
+  // });
 
 
 
@@ -42,9 +42,9 @@ jQuery(document).ready(function($) {
   //     },
   //   },
   // });
-  //
+  
   // // Передача полномочий кастомным кнопкам
-  //
+  
   // let owl = $('.owl-carousel');
   // owl.owlCarousel();
   // //$(".next") - находим нашу кнопку
@@ -54,6 +54,17 @@ jQuery(document).ready(function($) {
   // $('.owl-nav_arrow_prev').click(function() {
   //   owl.trigger('prev.owl.carousel');
   // });
+
+  //about slider
+
+  // $('.story__pic').owlCarousel({
+  //   loop: true,
+  //   margin: 10,
+  //   nav: false,
+  //   items: 1,
+    
+  // });
+
 
   //form validation
   $(".blog__post__form_name").on("input", function() {
@@ -158,33 +169,15 @@ jQuery(document).ready(function($) {
     });
   });
 // переход по ссылке
-  // let shareBtn = $(".home__page__filter__work");
-  // shareBtn.on("click", function () {
-  //   document.location.href = "http://www.site.ru";
-  // });
-
-  $(".slider__pic").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: ".slider-nav",
-  });
-  $(".slider-nav").slick({
-    slidesToShow: 4,
-    // slidesToScroll: 0,
-    asNavFor: ".slider__pic",
-    // dots: true,
-    centerMode: true,
-    focusOnSelect: true,
-    speed: 1000,
-    infinite: false,
+  let portfolioBtn = $(".home__page__filter__work");
+  portfolioBtn.on("click", function () {
+    console.log(333)
+    window.open('./portfolio details.html');
   });
 
-  // добавляем функцию он клик для кнопки share после слайдера
-  let shareBtn = $(".socials__btn");
-  shareBtn.on("click", function() {
-    let navigation = $(".socials__icons");
-    navigation.toggleClass("active");
-  });
+  
+
+ 
+
+ 
 });
