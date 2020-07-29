@@ -2435,6 +2435,10 @@ body.dark footer .footer__text span {
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  break-inside: avoid;
 }
 
 .blog .blog__page .blog__page__items .blog__page__article:not(:last-child) {
